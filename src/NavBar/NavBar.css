@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f39c12; /* Change the color on hover */
+}
