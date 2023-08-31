@@ -7,6 +7,7 @@ import DashBoard from '../NestLink/DashBoard'
 import Account from '../NestLink/Account'
 import Profile from '../NestLink/Profile'
 import NotFound from '../NotFoundComponent/NotFound'
+import PrivateRoutes from '../utilities/PrivateRoutes'
 import './NavBar.css';
 
 export default function NavBar() {
@@ -21,8 +22,9 @@ export default function NavBar() {
         </div>
         
         <Routes>
+        <Route element={<PrivateRoutes />}>
          <Route  path="/" element={<Home />} />
-         <Route  path="/login" element={<Login />} />
+         
          <Route  path="/register" element={<Register />} />
 
          <Route  path="/dashboard" element={<DashBoard />}>
@@ -32,6 +34,8 @@ export default function NavBar() {
 
          <Route  path="/notfound" element={<NotFound />} />
          <Route  path="*" element={<Navigate to='/notfound' />} />
+         </Route>
+         <Route  path="/login" element={<Login />} />
       </Routes>
     </div>
     </>
